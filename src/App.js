@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+// Import all section components
+import Hero from './components/sections/Hero';
+import ValueProposition from './components/sections/ValueProposition';
+import HowItWorks from './components/sections/HowItWorks';
+import Pricing from './components/sections/Pricing';
+import BookingForm from './components/sections/BookingForm';
+import Testimonials from './components/sections/Testimonials';
+import Footer from './components/sections/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-white">
+      <Hero />
+      <ValueProposition />
+      <HowItWorks />
+      <Pricing />
+      <Testimonials />
+      <div id="booking">
+        <BookingForm />
+      </div>
+      <div id="footer">
+        <Footer />
+      </div>
     </div>
   );
 }
 
 export default App;
+
